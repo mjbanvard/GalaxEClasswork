@@ -57,25 +57,26 @@ public class Calculator {
 		Scanner inTwoNums = new Scanner(System.in);
 		System.out.println("Please enter two numbers to be added, separated by a space: ");
 		
-		      if (inTwoNums.hasNextInt()) {
-		    	  for (int i = 0; i < 2; i ++) {
-		    		  inInt[i] = inTwoNums.nextInt();
-		    	  }
-		      } else if (inTwoNums.hasNextDouble()) {
-		    	  for (int i = 0; i < 2; i ++) {
-		    		  inDouble[i] = inTwoNums.nextDouble();
-		    	  }
-		      } else if (inTwoNums.hasNextFloat()) {
-		    	  for (int i = 0; i < 2; i ++) {
-		    		  inFloat[i] = inTwoNums.nextFloat();
-		    	  }
+	      if (inTwoNums.hasNextInt()) {
+	    	  for (int i = 0; i < 2; i ++) {
+	    		  inInt[i] = inTwoNums.nextInt();
+	    	  }
+	      } else if (inTwoNums.hasNextDouble()) {
+	    	  for (int i = 0; i < 2; i ++) {
+	    		  inDouble[i] = inTwoNums.nextDouble();
+	    	  }
+	      } else if (inTwoNums.hasNextFloat()) {
+	    	  for (int i = 0; i < 2; i ++) {
+	    		  inFloat[i] = inTwoNums.nextFloat();
+	    	  }
 //		      } else if (inTwoNums.hasNextBoolean()) {
 //		        System.out.println("boolean: " + inTwoNums.nextBoolean());
-		      } else {
-		        System.out.println(inTwoNums.next());
-		      }
-		    }
-		inTwoNums.close();
+	      } else {
+	        System.out.println(inTwoNums.next());
+	      }
+	      inTwoNums.close();
+	}
+		
 		
 		
 		/* public class ScannerNextExample1 {
@@ -121,6 +122,6 @@ public class Calculator {
 //		long numL;
 		
 //		c.add(input1, input2);
-	}
-
 }
+
+

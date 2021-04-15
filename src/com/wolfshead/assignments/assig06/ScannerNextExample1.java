@@ -1,4 +1,4 @@
-package com.wolfshead.assignments.assig10;
+package com.wolfshead.assignments.assig06;
 
 import java.util.*;  
 
