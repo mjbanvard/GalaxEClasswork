@@ -1,0 +1,136 @@
+package com.wolfshead.assignments.assig06;
+
+import java.util.Scanner;
+
+public class Calculator implements MathematicalOperations {
+	
+	public static int add(int[] num) {
+		int result = num[0] + num[1];
+		return result;
+	}
+	
+	public static int subtract(int[] num) {
+		int result = num[0] - num[1];
+		return result;
+	}
+	
+	public static int multiply(int[] num) {
+		int result = num[0] * num[1];
+		return result;
+	}
+	
+	public static int divide(int[] num) {
+		int result = num[0] / num[1];
+		return result;
+	}
+	
+	public static double add(double[] num) {
+		double result = num[0] + num[1];
+		return result;
+	}
+	
+	public static double subtract(double[] num) {
+		double result = num[0] - num[1];
+		return result;
+	}
+	
+	public static double multiply(double[] num) {
+		double result = num[0] * num[1];
+		return result;
+	}
+	
+	public static double divide(double[] num) {
+		double result = num[0] / num[1];
+		return result;
+	}
+	
+	public static float add(float[] num) {
+		float sum = num[0] + num[1];
+		return sum;
+	}
+	
+	public static float subtract(float[] num) {
+		float result = num[0] - num[1];
+		return result;
+	}
+	
+	public static float multiply(float[] num) {
+		float result = num[0] * num[1];
+		return result;
+	}
+	
+	public static float divide(float[] num) {
+		float result = num[0] / num[1];
+		return result;
+	}
+	
+	public static long add(long[] num) {
+		long sum = num[0] + num[1];
+		return sum;
+	}
+	
+	public static long subtract(long[] num) {
+		long result = num[0] - num[1];
+		return result;
+	}
+	
+	public static long multiply(long[] num) {
+		long result = num[0] * num[1];
+		return result;
+	}
+	
+	public static long divide(long[] num) {
+		long result = num[0] / num[1];
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		
+		Object[] inObject = new Object[3]; 
+		Object result = 0;
+		Scanner inEquate = new Scanner(System.in);
+		
+		System.out.print("Please enter a simple equation, two numbers and one operator, separated by spaces or <return>s: ");
+
+//		Option 1: All Strings -
+//		for (int i = 0; i < inObject.length; i ++) {
+//			inObject[i] = inEquate.next();
+//		}
+
+// 		Option 2: Two numbers and one String (because I can't ask for a character yet)
+//		Simplified for Doubles
+		inObject[0] = inEquate.nextDouble();
+		inObject[1] = inEquate.next();
+		inObject[2] = inEquate.nextDouble();
+		
+		inEquate.close();
+		
+		// Now that array is filled, you can look at elements [0] and [2] for the structure of the number.
+		// look for '.' 'f' 'd' 'e' to determine the type of the input.
+		// Element [1] is the operator and can be converted to a char and used in a switch
+		
+		/********* The following is simplified as an example, using double data types ***********/
+		double[] compDouble = {(double)inObject[0], (double)inObject[2]};
+		
+		switch ((String)inObject[1]) {
+			case "+": 
+				result = add(compDouble);
+				break;
+			case "-":
+				result = subtract(compDouble);
+				break;
+			case "*":
+				result = multiply(compDouble);
+				break;
+			case "/":
+				result = divide(compDouble);
+				break;
+			default:
+				System.out.println("Cannot determine operator. Please run again.");
+		}
+		
+		System.out.println("This is the result: " + result);
+	}
+}
+
+

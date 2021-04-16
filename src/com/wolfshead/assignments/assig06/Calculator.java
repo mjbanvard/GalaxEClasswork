@@ -2,126 +2,87 @@ package com.wolfshead.assignments.assig06;
 
 import java.util.Scanner;
 
-public class Calculator {
+public class Calculator implements MathematicalOperations {
+	
+/*	
+ * 
+ * This is a MVP version of the Calculator 
+ * 
+ */
+	
+	static Object[] inObject = new Object[3]; 
+	static Scanner inEquate = new Scanner(System.in);
+	static Object result = 0;
+	static double[] compDouble = {0, 0};
+	
+//	@Override
+	public static void add() {
+		result = compDouble[0] + compDouble[1];
+	}
 
-//	int numI;
-//	Integer numInteg;
-//	double numD;
-//	float numF;
-//	short numS;
-//	long numL;
-	
-	public int add(int[] num) {
-		int sum = num[0] + num[1];
-		
-		return sum;
+//	@Override
+	public static void subtract() {
+		result = compDouble[0] - compDouble[1];	
 	}
-	
-//	public Integer add(Integer num1, Integer num2) {
-//		Integer sum = num1 + num2;
-//		
-//		return sum;
-//	}
-	
-	public double add(double[] num) {
-		double sum = num[0] + num[1];
-		
-		return sum;
+
+//	@Override
+	public static void multiply() {
+		result = compDouble[0] * compDouble[1];	
 	}
-	
-	public float add(float[] num) {
-		float sum = num[0] + num[1];
-		
-		return sum;
-	}
-	
-//	public short add(short num1, short num2) {
-//		short sum = num1 + num2;
-//		
-//		return sum;
-//	}
-	
-	public long add(long[] num) {
-		long sum = num[0] + num[1];
-		
-		return sum;
+
+//	@Override
+	public static void divide() {
+		result = compDouble[0] / compDouble[1];	
 	}
 	
 	public static void main(String[] args) {
 		
-		int[] inInt = new int [2]; 
-		float[] inFloat = new float[2];
-		double[] inDouble = new double[2];
-//		int ct = 0;
-		
-		Scanner inTwoNums = new Scanner(System.in);
-		System.out.println("Please enter two numbers to be added, separated by a space: ");
-		
-	      if (inTwoNums.hasNextInt()) {
-	    	  for (int i = 0; i < 2; i ++) {
-	    		  inInt[i] = inTwoNums.nextInt();
-	    	  }
-	      } else if (inTwoNums.hasNextDouble()) {
-	    	  for (int i = 0; i < 2; i ++) {
-	    		  inDouble[i] = inTwoNums.nextDouble();
-	    	  }
-	      } else if (inTwoNums.hasNextFloat()) {
-	    	  for (int i = 0; i < 2; i ++) {
-	    		  inFloat[i] = inTwoNums.nextFloat();
-	    	  }
-//		      } else if (inTwoNums.hasNextBoolean()) {
-//		        System.out.println("boolean: " + inTwoNums.nextBoolean());
-	      } else {
-	        System.out.println(inTwoNums.next());
-	      }
-	      inTwoNums.close();
-	}
 		
 		
-		
-		/* public class ScannerNextExample1 {
-	
-		    public static void main(String[] args) {      
-		        System.out.print("Enter full name: ");        
-		        Scanner scan = new Scanner(System.in);  
-		        String firstName = scan.next();  
-		        String lastName = scan.next();  
-		        System.out.println("First Name is: "+firstName);  
-		        System.out.println("Last Name is: "+lastName);    
-		        scan.close();  
-		    }  
-		}  */
-		
-		/*  Scanner src = new Scanner(fin);
+		System.out.print("Please enter a simple equation, two numbers and one operator, separated by spaces or <return>s: ");
 
-		    while (src.hasNext()) {
-		      if (src.hasNextInt()) {
-		        System.out.println("int: " + src.nextInt());
-		      } else if (src.hasNextDouble()) {
-		        System.out.println("double: " + src.nextDouble());
-		      } else if (src.hasNextBoolean()) {
-		        System.out.println("boolean: " + src.nextBoolean());
-		      } else {
-		        System.out.println(src.next());
-		      }
-		    }
-		 */
+//		Option 1: All Strings -
+//		for (int i = 0; i < inObject.length; i ++) {
+//			inObject[i] = inEquate.next();
+//		}
+
+// 		Option 2: Two numbers and one String (because I can't ask for a character yet)
+//		Simplified for Doubles
+		inObject[0] = inEquate.nextDouble();
+		inObject[1] = inEquate.next();
+		inObject[2] = inEquate.nextDouble();
 		
+		inEquate.close();
 		
-//		Scanner input = new Scanner(System.in);
-//		
-//		var input1 = input.next();
-//		var input2 = input.next();
-//		input.close();
+		// Now that array is filled, you can look at elements [0] and [2] for the structure of the number.
+		// look for '.' 'f' 'd' 'e' to determine the type of the input.
+		// Element [1] is the operator and can be converted to a char and used in a switch
 		
-//		int oneInt, twoInt;
-//		Integer oneInteg;
-//		double oneD;
-//		float oneF;
-//		short numS;
-//		long numL;
+		/********* The following is simplified as an example, using double data types ***********/
+		compDouble[0] = (double)inObject[0];
+		compDouble[1] = (double)inObject[2];
 		
-//		c.add(input1, input2);
+		switch ((String)inObject[1]) {
+			case "+": 
+				add();
+				break;
+			case "-":
+				subtract();
+				break;
+			case "*":
+				multiply();
+				break;
+			case "/":
+				divide();
+				break;
+			default:
+				System.out.println("Cannot determine operator. Please run again.");
+		}
+		
+		System.out.println("This is the result: " + result);
+	}
+
+	
 }
 
 

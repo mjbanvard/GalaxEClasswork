@@ -1,4 +1,4 @@
-package com.wolfshead.assignments.assig5;
+package com.wolfshead.assignments.assig05;
 
 public class StudentInfo implements StudentSpec{
 
