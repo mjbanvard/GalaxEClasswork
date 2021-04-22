@@ -3,6 +3,7 @@ package SetsMaps;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class HashMapExample1 {
@@ -17,11 +18,13 @@ public class HashMapExample1 {
 		
 		System.out.println(map.get(2));
 		
-		Set set = map.entrySet();
-		Iterator itr = set.iterator();
+//		Added paramenters to chase away warning markers from STS4
+//		
+		Set<Entry<Integer, String>> set = map.entrySet();
+		Iterator<Entry<Integer, String>> itr = set.iterator();
 		
 		while(itr.hasNext()) {
-			Map.Entry entry = (Map.Entry) itr.next();
+			Map.Entry<Integer, String> entry = (Map.Entry<Integer, String>) itr.next();
 			System.out.println(entry.getKey()+ " " + entry.getValue());
 		}
 		

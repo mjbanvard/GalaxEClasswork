@@ -2,6 +2,8 @@ package Assignment11;
 
 public class Company {
 	
+	// QUESTION 2
+	
 	int compId;
 	String companyName;
 	String compPhone;

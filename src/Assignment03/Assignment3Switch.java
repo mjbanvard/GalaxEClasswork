@@ -3,7 +3,6 @@ package Assignment03;
 public class Assignment3Switch {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		byte numMonth = 5;
 		String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};

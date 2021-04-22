@@ -13,8 +13,18 @@ public class Student implements Comparable<Student>{
 		this.age = age;
 	}
 	
+	@Override
+	public int compareTo(Student o) {
+		if(age == o.age) {
+			return 0;
+		} else if (age < o.age) {
+			return -1;
+		} else {
+			return 1;
+		}
+	}
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 /*
@@ -24,19 +34,11 @@ public class Student implements Comparable<Student>{
  * 
  * 
  */
-	@Override
+	
 //	public int compareTo(Student o) {
 //		
 //		return name.compareTo(o.name);
 //	}
 	
-public int compareTo(Student o) {
-	if(age == o.age) {
-		return 0;
-	} else if (age < o.age) {
-		return -1;
-	} else {
-		return 1;
-	}
 
-}}
+}

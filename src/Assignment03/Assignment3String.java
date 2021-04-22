@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Assignment3String {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner myObj = new Scanner(System.in);
 	    System.out.print("Enter first name: ");
 	    String userFirst = myObj.nextLine(); 

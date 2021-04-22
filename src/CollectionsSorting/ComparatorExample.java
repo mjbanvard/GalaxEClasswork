@@ -15,7 +15,7 @@ public class ComparatorExample {
 		list.add(new Student1("D", 1, 18));
 		list.add(new Student1("B", 2, 19));
 
-		Iterator itr = list.iterator();
+		Iterator<Student1> itr = list.iterator();
 		while (itr.hasNext()) {
 			Student1 student = (Student1) itr.next();
 			System.out.println(student.name);

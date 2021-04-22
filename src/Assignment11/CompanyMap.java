@@ -5,6 +5,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class CompanyMap {
+	
+	// QUESTION 2
 
 	public static void main(String[] args) {
 		
@@ -35,7 +37,7 @@ public class CompanyMap {
 		
 		for(Company c : compMap.values()) {
 			if(c.companyName.contains(inp)) {
-				System.out.println(c.companyName + "'s Phone Number: " + c.compPhone);
+				System.out.println(c.companyName + "'s Phone Number: " + c.compPhone + ", Email: " + c.compEmail + " and Description: " + c.compInfo);
 				found = true;
 			}
 		}

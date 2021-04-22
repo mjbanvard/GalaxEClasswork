@@ -3,7 +3,6 @@ package Assignment03;
 public class Assignment3Table {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] mults = {1, 2, 3, 10};
 		int input = 5;
 		

@@ -3,6 +3,8 @@ package Assignment11;
 import java.util.Comparator;
 
 public class SalaryComparator implements Comparator<Employee> {
+	
+	// QUESTION 1
 
 
 		@Override
@@ -19,9 +21,5 @@ public class SalaryComparator implements Comparator<Employee> {
 			}
 		}
 			
-			public static void main(String[] args) {
-				
-				
-			}
 
 }

@@ -2,7 +2,7 @@ package CollectionsSorting;
 
 import java.util.Comparator;
 
-public class AgeComparator implements Comparator{
+public class AgeComparator implements Comparator<Object>{
 
 	public int compare(Object o1, Object o2) {
 		Student1 s1 = (Student1)o1;
