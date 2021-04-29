@@ -2,7 +2,7 @@ package Assignment21;
 
 import java.util.ArrayList;
 
-public class RetrieveElementArrayList {
+public class ThreeRetrieveElementArrayList {
 	
 	// 3. Write a Java program to retrieve an element (at a specified index) from a given array list. 
 

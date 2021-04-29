@@ -2,7 +2,7 @@ package Assignment21;
 
 import java.util.ArrayList;
 
-public class IterateArrayList {
+public class TwoIterateArrayList {
 	
 	// 2. Write a Java program to iterate through all elements in array list. 
 
