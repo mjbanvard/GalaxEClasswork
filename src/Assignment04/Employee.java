@@ -2,12 +2,18 @@ package Assignment04;
 
 public class Employee {
 
-	int empId = 1;
-	String firstName = "";
-	String lastName = "";
-	int salary = 0;
-	String department = "";
-	String address = "";
+	int empId;
+	String firstName;
+	String lastName;
+	int salary;
+	String department;
+	String address;
+	
+	Employee(){}
+	
+	Employee(int empId, String firstName, String lastName, int salary, String department, String address) {
+		
+	}
 	
 	public int getEmpId() {
 		return empId;
